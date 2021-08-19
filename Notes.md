@@ -19,11 +19,9 @@ TODO
 
 [ ] Page 2
     [x] Need a form to store user info
-        [x] use local state
-        [ ] should send choice data to page 3 and 4
     [ ] Next button
-        [ ] should navigate to page 3
-        [ ] store in prop to send to page 3
+        [x] should navigate to page 3
+        [ ] dispatch user info to send to page 3 and 4
 
 [ ] Page 3
     [ ] a section on the top of the page that 

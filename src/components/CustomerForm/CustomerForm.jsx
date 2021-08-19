@@ -1,9 +1,11 @@
 import {useState} from 'react';
+import {useDispatch} from 'react-redux';
 import {useHistory} from 'react-router-dom';
+import Checkout from '../Checkout/Checkout';
 
 
 function CheckoutForm () {
-
+    //const dispatch = useDispatch();
     const history = useHistory();
 
     const [customerInfo, setCustomerInfo] = useState({
@@ -28,6 +30,11 @@ function CheckoutForm () {
         // Prevent page refresh on submit
         event.preventDefault(event);
         console.log('Adding Customer Info:', customerInfo);
+
+        dispatch({
+            type: "CUSTOMER_FORM",
+            payload: customerInfo
+        })
 
         // Clear inputs
         setCustomerInfo({
@@ -96,9 +103,11 @@ function CheckoutForm () {
                     />
                 </div>
 
-                <div className="nextBtnPageTwo">
-                    <button type="submit">NEXT</button>
+                <div>
+                    <button className="nextBtnPageTwo" type="submit">NEXT</button>
                 </div>
+
+                {<Checkout customerInfo={customerInfo} />}
 
             </form>
         </div>

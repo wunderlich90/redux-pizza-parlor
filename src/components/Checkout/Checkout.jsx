@@ -1,5 +1,5 @@
 
-function Checkout () {
+function Checkout ({customerInfo}) {
     return (
         <>
             <h1>Checkout Test</h1>

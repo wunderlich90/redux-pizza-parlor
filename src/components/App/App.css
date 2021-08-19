@@ -16,6 +16,14 @@
 
 .nextBtnPageTwo{
   margin: 10px;
+  background-color: cornflowerblue;
+  border: none;
+  color: white;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 input{
