@@ -20,9 +20,6 @@ TODO
 [ ] Page 2
     [x] Need a form to store user info
         [x] use local state
-    [x] two `radio` buttons
-        [x] Pickup
-        [x] Delivery
         [ ] should send choice data to page 3 and 4
     [ ] Next button
         [ ] should navigate to page 3

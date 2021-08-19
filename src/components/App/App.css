@@ -14,12 +14,12 @@
   font-size: 2em;
 }
 
-
-.textInput {
-  display: inline;
-}
-
-.radioInput {
-  display: inline-block;
+.nextBtnPageTwo{
   margin: 10px;
 }
+
+input{
+  margin: 10px;
+  text-align: left;
+}
+

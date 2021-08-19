@@ -1,4 +1,6 @@
 import {useState} from 'react';
+import {Link} from 'react-router-dom';
+
 
 function CheckoutForm () {
 
@@ -13,7 +15,7 @@ function CheckoutForm () {
     const handleInputChange = (event) => {
         setCustomerInfo({
             // Spread-operator
-            // Handles
+            // Handles all user inputs
             ...customerInfo, 
                 [event.target.name]: event.target.value,
         });
@@ -31,7 +33,8 @@ function CheckoutForm () {
             streetAddress: '',
             city: '',
             zip: '',
-            getOrder: ''});
+            getOrder: ''
+        });
     } // end onSubmit
 
     return (
@@ -89,8 +92,9 @@ function CheckoutForm () {
                     />
                 </div>
 
-                <div className="nextBtn">
+                <div className="nextBtnPageTwo">
                     <button type="submit">NEXT</button>
+                    <Link to="/Checkout" type="submit">NEXT</Link>
                 </div>
 
             </form>
@@ -98,4 +102,4 @@ function CheckoutForm () {
     ) // end return
 } // end Checkout Form
 
-export default CheckoutForm
+export default CheckoutForm;
