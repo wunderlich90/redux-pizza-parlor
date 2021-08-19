@@ -5,7 +5,7 @@ TODO
     [x] page 3 to display checkout
     [x] page 4 to display admin table
 
-[ ] Page 1
+[ ] Page 1 (FARAH & JEREMY)
     [ ]axios GET to display pizzas
         [ ] use a dispatch to store pizza info in store
     [ ] need add button (conditional remove button)
