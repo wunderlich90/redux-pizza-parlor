@@ -17,16 +17,11 @@ TODO
         [ ] should navigate to page 2
         [ ] use react-router-dom
 
-[ ] Page 2 (BEN)
-    [ ] Need a form to store user info
-        [ ] use local state
-    [ ] two `radio` buttons
-        [ ] Pickup
-        [ ] Delivery
-        [ ] should send choice data to page 3 and 4
+[ ] Page 2
+    [x] Need a form to store user info
     [ ] Next button
-        [ ] should navigate to page 3
-        [ ] store in prop to send to page 3
+        [x] should navigate to page 3
+        [ ] dispatch user info to send to page 3 and 4
 
 [ ] Page 3
     [ ] a section on the top of the page that 
