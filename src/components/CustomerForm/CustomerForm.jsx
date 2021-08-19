@@ -1,12 +1,38 @@
-
+import {useState} from 'react';
 
 function CheckoutForm () {
+
+    const [customerInfo, setCustomerInfo] = useState({
+        name: '',
+        streetAddress: '',
+        city: '',
+        zip: '',
+        getOrder: ''
+    })
+
+    const handleInputChange = (event) => {
+        setCustomerInfo({
+            // Spread-operator
+            // Handles
+            ...customerInfo, 
+                [event.target.name]: event.target.value,
+        });
+    } // end handleInputChange
 
 
     const onSubmit = (event) => {
         // Prevent page refresh on submit
         event.preventDefault(event);
-    }
+        console.log('Adding Customer Info:', customerInfo);
+
+        // Clear inputs
+        setCustomerInfo({
+            name: '',
+            streetAddress: '',
+            city: '',
+            zip: '',
+            getOrder: ''});
+    } // end onSubmit
 
     return (
         <div>
@@ -17,6 +43,9 @@ function CheckoutForm () {
                     <input 
                         type="text"
                         placeholder="Name"
+                        name="name"
+                        value={customerInfo.name}
+                        onChange={handleInputChange}
                     />
 
                     <br></br>
@@ -24,6 +53,9 @@ function CheckoutForm () {
                     <input
                         type="text"
                         placeholder="Street Address"
+                        name="streetAddress"
+                        value={customerInfo.streetAddress}
+                        onChange={handleInputChange}
                     />
 
                     <br></br>
@@ -31,33 +63,36 @@ function CheckoutForm () {
                     <input
                         type="text"
                         placeholder="City"
+                        name="city"
+                        value={customerInfo.city}
+                        onChange={handleInputChange}
                     />
+
                     <br></br>
 
                     <input
                         type="text"
                         placeholder="Zip"
+                        name="zip"
+                        value={customerInfo.zip}
+                        onChange={handleInputChange}
+                    />
+
+                    <br></br>
+
+                    <input
+                        type="text"
+                        placeholder="Delivery or Pickup"
+                        name="getOrder"
+                        value={customerInfo.getOrder}
+                        onChange={handleInputChange}
                     />
                 </div>
 
-                <br></br>
-
-                <div className="radioInput">
-                    <div>
-                        <input
-                            type="radio"
-                            placeholder="Pickup"
-                        />
-                        <p>Pickup</p>
-                    </div>
-                    <div>
-                        <input
-                            type="radio"
-                            placeholder="Delivery"
-                        />
-                        <p>Delivery</p>
-                    </div>
+                <div className="nextBtn">
+                    <button type="submit">NEXT</button>
                 </div>
+
             </form>
         </div>
     ) // end return

@@ -20,5 +20,6 @@
 }
 
 .radioInput {
-  display: inline;
+  display: inline-block;
+  margin: 10px;
 }
