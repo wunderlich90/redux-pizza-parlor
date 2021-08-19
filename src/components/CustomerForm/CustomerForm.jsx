@@ -1,11 +1,10 @@
 import {useState} from 'react';
 import {useDispatch} from 'react-redux';
-import {useHistory} from 'react-router-dom';
-import Checkout from '../Checkout/Checkout';
+import {useHistory} from 'react-router-dom';;
 
 
 function CheckoutForm () {
-    //const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const history = useHistory();
 
     const [customerInfo, setCustomerInfo] = useState({
@@ -107,7 +106,6 @@ function CheckoutForm () {
                     <button className="nextBtnPageTwo" type="submit">NEXT</button>
                 </div>
 
-                {<Checkout customerInfo={customerInfo} />}
 
             </form>
         </div>
