@@ -33,11 +33,22 @@ const checkoutReducer = (state = [], action) => {
     return state;
 };
 
+const customerInfoReducer = (state = [], action) => {
+    switch (action.type) {
+        case "CUSTOMER_FORM":
+            return [...state, action.payload]
+    
+        default:
+            return state
+    }
+}
+
 // Store
 const storeInstance = createStore(
     combineReducers({
         // Add Reducers as needed
         checkoutReducer,
+        customerInfoReducer
         pizzaReducer
     }),   
     applyMiddleware(

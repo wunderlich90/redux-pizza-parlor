@@ -1,6 +1,4 @@
-.App {
-  text-align: center;
-}
+
 
 .App-header {
   background-color: #222;
@@ -16,7 +14,7 @@
 
 .nextBtnPageTwo{
   margin: 10px;
-  background-color: cornflowerblue;
+  background-color: black;
   border: none;
   color: white;
   padding: 15px 40px;
