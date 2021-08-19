@@ -17,11 +17,11 @@ TODO
         [ ] should navigate to page 2
         [ ] use react-router-dom
 
-[ ] Page 2
+[x] Page 2
     [x] Need a form to store user info
-    [ ] Next button
+    [x] Next button
         [x] should navigate to page 3
-        [ ] dispatch user info to send to page 3 and 4
+        [x] dispatch user info to send to page 3 and 4
 
 [ ] Page 3
     [ ] a section on the top of the page that 
