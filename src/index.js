@@ -9,6 +9,17 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 // Reducers
+const pizzaReducer = (state = [], action) => {
+    // Pizzas added to the cart
+    switch (action.type) {
+        case 'SET_PIZZA_LIST':
+            return action.payload
+        default:
+    }
+
+    return state;
+};
+
 const checkoutReducer = (state = [], action) => {
     // Pizzas added to the cart
     switch (action.type) {
@@ -26,7 +37,8 @@ const checkoutReducer = (state = [], action) => {
 const storeInstance = createStore(
     combineReducers({
         // Add Reducers as needed
-        checkoutReducer
+        checkoutReducer,
+        pizzaReducer
     }),   
     applyMiddleware(
         logger
