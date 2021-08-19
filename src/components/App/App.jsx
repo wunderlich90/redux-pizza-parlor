@@ -6,6 +6,8 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 // Components
 import CustomerForm from '../CustomerForm/CustomerForm';
 import Checkout from '../Checkout/Checkout';
+import SelectPizza from '../SelectPizza/SelectPizza'
+
 
 function App() {
 
@@ -14,7 +16,7 @@ function App() {
       <header className='App-header'>
         <h1 className='App-title'>Prime Pizza</h1>
       </header>
-  
+      <SelectPizza />
       <img src='images/pizza_photo.png' />
       <p>Pizza is great.</p>
 
