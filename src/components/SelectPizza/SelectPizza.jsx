@@ -1,6 +1,12 @@
 import axios from 'axios';
-import { useDispatch, useSelector } from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 
+function SelectPizza () {
+    return (
+        <>
+        
+        </>
+    );
+} 
 
-
-
+export default SelectPizza;
