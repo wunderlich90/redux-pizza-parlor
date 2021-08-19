@@ -5,7 +5,7 @@ TODO
     [x] page 3 to display checkout
     [x] page 4 to display admin table
 
-[ ] Page 1
+[ ] Page 1 (FARAH & JEREMY)
     [ ]axios GET to display pizzas
         [ ] use a dispatch to store pizza info in store
     [ ] need add button (conditional remove button)
@@ -17,21 +17,16 @@ TODO
         [ ] should navigate to page 2
         [ ] use react-router-dom
 
-[ ] Page 2
-    [ ] Need a form to store user info
-        [ ] use local state
-    [ ] two `radio` buttons
-        [ ] Pickup
-        [ ] Delivery
-        [ ] should send choice data to page 3 and 4
-    [ ] Next button
-        [ ] should navigate to page 3
-        [ ] store in prop to send to page 3
+[x] Page 2
+    [x] Need a form to store user info
+    [x] Next button
+        [x] should navigate to page 3
+        [x] dispatch user info to send to page 3 and 4
 
 [ ] Page 3
-    [ ] a section on the top of the page that 
-        dislpays user info and delivery choice
-        [ ] info is pulled from page 2
+    [x] a section on the top of the page that 
+        displays user info and delivery choice
+        [x] info is pulled from page 2
     [ ] needs a table
         [ ] displays pizza name
         [ ] displays pizza cost
