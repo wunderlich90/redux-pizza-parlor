@@ -46,7 +46,7 @@ function App() {
       <Router>
         <div>
           <div className="nav">
-            <SelectPizza />
+            <Route path="/" component={SelectPizza}></Route>
             <Route path="/CustomerForm" component={CustomerForm}></Route>
             <Route path="/Checkout" component={Checkout}></Route>
           </div>

@@ -1,9 +1,16 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
+import { useHistory } from 'react-router-dom';;
 
 function Checkout () {
+    const history = useHistory();
     const customerInfo = useSelector(store => store.customerInfoReducer);
     console.log('Customer Info', customerInfo);
+
+    function clickHandler () {
+        // Takes user to home page
+        history.push('/');
+    }
 
     return (
         <>
@@ -16,7 +23,7 @@ function Checkout () {
                 <p>{customer.getOrder}</p> 
             </div>
             )}
-            <button>NEXT</button>
+            <button onClick={clickHandler}>CHECKOUT</button>
             
         </>
     )
