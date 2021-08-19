@@ -1,9 +1,9 @@
 TODO
-[ ] create 4 component files
-    [ ] page one to select pizzas
-    [ ] page 2 to display customer form
-    [ ] page 3 to display checkout
-    [ ] page 4 to display admin table
+[x] create 4 component files
+    [x] page one to select pizzas
+    [x] page 2 to display customer form
+    [x] page 3 to display checkout
+    [x] page 4 to display admin table
 
 [ ] Page 1
     [ ]axios GET to display pizzas

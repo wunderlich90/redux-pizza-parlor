@@ -13,3 +13,12 @@
 .App-title {
   font-size: 2em;
 }
+
+
+.textInput {
+  display: inline;
+}
+
+.radioInput {
+  display: inline;
+}
