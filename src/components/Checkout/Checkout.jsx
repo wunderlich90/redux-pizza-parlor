@@ -7,14 +7,16 @@ function Checkout () {
 
     return (
         <>
-            <h3>Step 3: Checkout</h3>
+            <h1>Step 3: Checkout</h1>
             {customerInfo.map((customer, index) =>
             <div key={index}>
                 <p>{customer.name}</p>
                 <p>{customer.streetAddress}</p>
-                <p>{customer.city}, {customer.zip}</p>  
+                <p>{customer.city}, {customer.zip}</p> 
+                <p>{customer.getOrder}</p> 
             </div>
             )}
+            <button>NEXT</button>
             
         </>
     )

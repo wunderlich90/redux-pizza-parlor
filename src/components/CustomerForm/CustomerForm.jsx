@@ -49,7 +49,7 @@ function CheckoutForm () {
 
     return (
         <div>
-            <h3>Step 2: Customer Information</h3>
+            <h1>Step 2: Customer Information</h1>
 
             <form onSubmit={onSubmit}>
                 <div className="textInput">
