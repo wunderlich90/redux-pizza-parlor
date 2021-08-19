@@ -34,11 +34,13 @@ function App() {
   return (
     <div className='App'>
       <header className='App-header'>
-        <h1 className='App-title'>Prime Pizza</h1>
+        <div id="prime"><h1 className='App-title'>Prime Pizza</h1></div>
+        <div id="total"><p>Total: $</p></div>
+        
+        
       </header>
     
       <img src='images/pizza_photo.png' />
-      <p>Pizza is great.</p>
 
      
       <Router>

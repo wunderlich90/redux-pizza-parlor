@@ -37,7 +37,7 @@ TODO
         [ ] show an order confirmation (alert?)
         [ ] should clear the cart
         [ ] should navigate user back to page 1
-        [ ] should dsend data to the Admin page (page 4)
+        [ ] should send data to the Admin page (page 4)
 
 [ ] Page 4
     [ ] needs a table
