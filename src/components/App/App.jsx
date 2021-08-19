@@ -23,10 +23,7 @@ function App() {
         <div>
           <div className="nav">
             <Route path="/CustomerForm" component={CustomerForm}></Route>
-            <Route path="/Checkout" component={Checkout}>
-            </Route>
-          </div>
-          <div className="components">
+            <Route path="/Checkout" component={Checkout}></Route>
           </div>
         </div>
       </Router>

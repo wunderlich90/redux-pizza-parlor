@@ -2,7 +2,7 @@
 function Checkout () {
     return (
         <>
-            <h1>Test</h1>
+            <h1>Checkout Test</h1>
         </>
     )
 } // end Checkout

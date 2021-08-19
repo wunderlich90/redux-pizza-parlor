@@ -1,8 +1,10 @@
 import {useState} from 'react';
-import {Link} from 'react-router-dom';
+import {useHistory} from 'react-router-dom';
 
 
 function CheckoutForm () {
+
+    const history = useHistory();
 
     const [customerInfo, setCustomerInfo] = useState({
         name: '',
@@ -35,6 +37,8 @@ function CheckoutForm () {
             zip: '',
             getOrder: ''
         });
+
+        history.push('/Checkout')
     } // end onSubmit
 
     return (
@@ -94,7 +98,6 @@ function CheckoutForm () {
 
                 <div className="nextBtnPageTwo">
                     <button type="submit">NEXT</button>
-                    <Link to="/Checkout" type="submit">NEXT</Link>
                 </div>
 
             </form>
