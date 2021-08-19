@@ -43,6 +43,7 @@ function App() {
       <Router>
         <div>
           <div className="nav">
+            <SelectPizza />
             <Route path="/CustomerForm" component={CustomerForm}></Route>
             <Route path="/Checkout" component={Checkout}></Route>
           </div>
