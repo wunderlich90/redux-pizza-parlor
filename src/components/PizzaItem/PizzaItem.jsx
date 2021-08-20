@@ -46,12 +46,10 @@ function PizzaItem ({ pizza }) {
 
                         <h3>{pizza.name}</h3>
                         <p>{pizza.description}</p>
-                        <p>${pizza.price}</p>
+                        <h4>${pizza.price}</h4>
 
-                   
                     <button className="addButton"
-                        onClick={() => {toggleShowAdd()}}
-                    >
+                        onClick={() => {toggleShowAdd()}}>
                         Add
                     </button>
                 </div>
@@ -61,7 +59,7 @@ function PizzaItem ({ pizza }) {
      
                         <h3>{pizza.name}</h3>
                         <p>{pizza.description}</p>
-                        <p>${pizza.price}</p>
+                        <h4>${pizza.price}</h4>
 
                     <button className="removeButton"
                         onClick={() => {toggleShowAdd()}}>
