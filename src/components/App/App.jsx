@@ -47,6 +47,11 @@ function App() {
             <SelectPizza />
             <Route path="/CustomerForm" component={CustomerForm}></Route>
             <Route path="/Checkout" component={Checkout}></Route>
+
+            {/* <Route
+              path="/Checkout"
+              component={() => <Checkout getPizzas={getPizzas} />}
+            /> */}
           </div>
         </div>
       </Router>
