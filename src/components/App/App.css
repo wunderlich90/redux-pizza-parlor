@@ -32,7 +32,7 @@ input{
   text-align: left;
 }
 
-<<<<<<< HEAD
+
 table, th, td {
   border: solid 1px black;
 }
@@ -54,11 +54,6 @@ table, th, td {
   width: 75%
 }
 
-
-
-
-
-=======
 .pageOneNext{
   margin: 10px;
   background-color: black;
@@ -93,4 +88,4 @@ table, th, td {
   display: inline-block;
   font-size: 16px;
 }
->>>>>>> master
+

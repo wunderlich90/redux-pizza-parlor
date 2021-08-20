@@ -30,7 +30,7 @@ function App() {
         type: 'SET_PIZZA_LIST',
         payload: response.data
       })
-      history.push('/home');
+      // history.push('/home');
     }).catch(err => {
       console.error('GET /api/pizza failed', err);
     })

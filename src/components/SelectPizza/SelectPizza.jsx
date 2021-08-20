@@ -1,17 +1,20 @@
 import axios from 'axios';
 import {useSelector, useDispatch} from 'react-redux';
 import { useState } from 'react';
+import {useHistory} from 'react-router-dom';
 
 import PizzaItem from '../PizzaItem/PizzaItem';
 
 
 
 function SelectPizza () {
-   
+   const history = useHistory();
 
    const pizzas = useSelector(store => store.pizzaReducer)
 
-    
+    function onClick () {
+        history.push('/CustomerForm')
+    }
 
     return (
         <>
@@ -25,9 +28,9 @@ function SelectPizza () {
                 ))}
             </div>
             <div>
-                <button className="pageOneNext">
-                    NEXT
-                </button>
+                <div>
+                    <button className="nextPage" onClick={onClick}>NEXT</button>
+                </div>
             </div>
 
            

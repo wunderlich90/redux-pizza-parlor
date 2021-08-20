@@ -56,10 +56,7 @@ function PizzaItem ({ pizza }) {
                 </div>
 
             }
-        
-            <div>
-                <button className="nextPage" onClick={onClick}>NEXT</button>
-            </div>
+    
         
         </>
     );
