@@ -26,7 +26,7 @@ function PizzaItem ({ pizza }) {
                         src={pizza.image_path}
                         
                     />
-                    <button
+                    <button className="addButton"
                         onClick={() => {toggleShowAdd()}}
                     >
                         Add
@@ -45,7 +45,7 @@ function PizzaItem ({ pizza }) {
                         src={pizza.image_path}
                         
                     />
-                    <button>Remove</button>
+                    <button className="removeButton">Remove</button>
                 </div>
 
             }
