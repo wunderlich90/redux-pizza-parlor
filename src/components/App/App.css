@@ -32,6 +32,10 @@ input{
   text-align: left;
 }
 
+table, th, td {
+  border: solid 1px black;
+}
+
 #prime {
   float: left;
   width: 75%;
@@ -44,5 +48,12 @@ input{
   font-weight: normal;
   font-size: 24px;
 }
+
+#checkoutTable {
+  width: 75%
+}
+
+
+
 
 

@@ -9,7 +9,7 @@ function Checkout () {
     console.log('Customer Info', customerInfo);
 
     function clickHandler () {
-        alert('Are you ready to checkout?')
+        confirm('Are you ready to checkout?')
         // Dispatch to clear user data
         // Will need to change the reducer to clear cart reducer
         dispatch({
@@ -23,16 +23,20 @@ function Checkout () {
         <div className="pageThree">
             <h1>Step 3: Checkout</h1>
             {customerInfo.map((customer, index) =>
-            <div key={index}>
-                <p>{customer.name}</p>
-                <p>{customer.streetAddress}</p>
-                <p>{customer.city}, {customer.zip}</p> 
-                <p>For {customer.getOrder}</p> 
+            <div key={index} id="customerInfoPageThree">
+                <div>
+                    <p>{customer.name}</p>
+                    <p>{customer.streetAddress}</p>
+                    <p>{customer.city}, {customer.zip}</p> 
+                </div>
+                <div id="getOrder">
+                    <p>For {customer.getOrder}</p>
+                </div>
             </div>
             )}
             
             <div>
-                <table>
+                <table id="checkoutTable">
                     <thead>
                         <th>Name</th>
                         <th>Cost</th>
@@ -43,7 +47,7 @@ function Checkout () {
                 </table>
                 
                 <div>
-                    
+
                 </div>
 
                 <div id="checkoutBtn">
