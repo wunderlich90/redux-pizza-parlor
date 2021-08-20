@@ -1,26 +1,27 @@
 import { useLayoutEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { useHistory } from 'react-router-dom';
+
    
 
 
 
-function PizzaItem ({ pizza }) {
+function PizzaItem({ pizza, calculateTotalPrice}) {
     const dispatch = useDispatch();
-    const history = useHistory();
+
 
 
     const [showAdd, setShowAdd] = useState(true);
 
     const toggleShowAdd = () => {
+      
         setShowAdd(!showAdd);
         switch (showAdd) {
             case true:
                 return dispatch({
                     type: 'ADD_TO_CART',
                     payload: pizza
-                })
+                }), calculateTotalPrice();
             case false:
                 return dispatch({
                     type: 'DELETE_CART',
@@ -31,61 +32,39 @@ function PizzaItem ({ pizza }) {
                 break;
         }
 
-
-
+        
     }
    
 
-    function onClick() {
-        history.push('/CustomerForm')
-    }
-
 
     return (
-        <> 
+        <div className="pageOne"> 
             {
                 showAdd ?
-                <div>
-                    <ul>
-                        <li>{pizza.name}</li>
-                        <li>{pizza.description}</li>
-                        <li>{pizza.price}</li>
+                <div id="addPizzaDisplay">
+                        <img src={pizza.image_path} />
+                        <h3>{pizza.name}</h3>
+                        <p>{pizza.description}</p>
+                        <h4>${pizza.price}</h4>
 
-                    </ul>
-                    <img
-                       
-                        src={pizza.image_path}
-                        
-                    />
-                    <button className="addButton"
-                        onClick={() => {toggleShowAdd()}}
-                    >
-                        Add
-                    </button>
+                    <button className="addButton" onClick={() => {toggleShowAdd()}}>Add</button>
                 </div>
-                :
-                <div>
-                    <ul>
-                        <li>{pizza.name}</li>
-                        <li>{pizza.description}</li>
-                        <li>{pizza.price}</li>
 
-                    </ul>
-                    <img
-                       
-                        src={pizza.image_path}
-                        
-                    />
-                    <button className="removeButton"
-                        onClick={() => {toggleShowAdd()}}>
-                        Remove
-                    </button>
+                :
+
+                <div id="removePizzaDisplay">
+                        <img src={pizza.image_path} />
+                        <h3>{pizza.name}</h3>
+                        <p>{pizza.description}</p>
+                        <h4>${pizza.price}</h4>
+
+                    <button className="removeButton" onClick={() => {toggleShowAdd()}}>Remove</button>
                 </div>
 
             }
     
         
-        </>
+        </div>
     );
 }
 

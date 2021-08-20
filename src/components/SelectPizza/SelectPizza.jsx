@@ -7,7 +7,7 @@ import PizzaItem from '../PizzaItem/PizzaItem';
 
 
 
-function SelectPizza () {
+function SelectPizza ({calculateTotalPrice}) {
    const history = useHistory();
 
    const pizzas = useSelector(store => store.pizzaReducer)
@@ -18,12 +18,13 @@ function SelectPizza () {
 
     return (
         <>
-          <h1>Pizza's</h1>
+          <h1 className="pageOne">Step 1: Select Pizzas</h1>
 
             <div>
                 {pizzas.map(pizza => (
                     <PizzaItem key={pizza.id}
                         pizza={pizza}
+                        calculateTotalPrice={calculateTotalPrice}
                     />
                 ))}
             </div>
