@@ -22,6 +22,11 @@ function SelectPizza () {
                     />
                 ))}
             </div>
+            <div>
+                <button className="pageOneNext">
+                    NEXT
+                </button>
+            </div>
 
         </>
     );
