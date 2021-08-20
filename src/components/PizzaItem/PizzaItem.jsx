@@ -1,38 +1,47 @@
+import { useLayoutEffect } from 'react';
 import { useState } from 'react';
 
 function PizzaItem ({ pizza }) {
 
-    const [showRemove, setShowRemove] = useState(false);
+    const [showAdd, setShowAdd] = useState(true);
 
-    const toggleShowRemove = () => {
-        setShowRemove(!showRemove);
+    const toggleShowAdd = () => {
+        setShowAdd(!showAdd);
     }
 
 
     return (
         <> 
             {
-                showRemove ?
-                <div key={pizza.id}>
+                showAdd ?
+                <div>
+                    <ul>
+                        <li>{pizza.name}</li>
+                        <li>{pizza.description}</li>
+                        <li>{pizza.price}</li>
+
+                    </ul>
                     <img
-                        name={pizza.name}
-                        description={pizza.descriptiion}
-                        price={pizza.price}
+                       
                         src={pizza.image_path}
                         
                     />
                     <button
-                        onClick={() => {toggleShowRemove()}}
+                        onClick={() => {toggleShowAdd()}}
                     >
                         Add
                     </button>
                 </div>
                 :
-                <div key={pizza.id}>
+                <div>
+                    <ul>
+                        <li>{pizza.name}</li>
+                        <li>{pizza.description}</li>
+                        <li>{pizza.price}</li>
+
+                    </ul>
                     <img
-                        name={pizza.name}
-                        description={pizza.descriptiion}
-                        price={pizza.price}
+                       
                         src={pizza.image_path}
                         
                     />

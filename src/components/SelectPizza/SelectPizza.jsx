@@ -1,11 +1,12 @@
 import axios from 'axios';
 import {useSelector, useDispatch} from 'react-redux';
 import { useState } from 'react'; 
+import PizzaItem from '../PizzaItem/PizzaItem';
 
 
 function SelectPizza () {
 
-   const pizzas = useSelector(store => store.checkoutReducer)
+   const pizzas = useSelector(store => store.pizzaReducer)
 
 
 
@@ -15,8 +16,8 @@ function SelectPizza () {
           <h1>Pizza's</h1>
 
             <div>
-                {pizzas.map((pizza) => (
-                    <PizzaItem
+                {pizzas.map(pizza => (
+                    <PizzaItem key={pizza.id}
                         pizza={pizza}
                     />
                 ))}
