@@ -1,16 +1,40 @@
 import { useLayoutEffect } from 'react';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
+   
+
 
 
 function PizzaItem ({ pizza }) {
+    const dispatch = useDispatch();
     const history = useHistory();
+
 
     const [showAdd, setShowAdd] = useState(true);
 
     const toggleShowAdd = () => {
         setShowAdd(!showAdd);
+        switch (showAdd) {
+            case true:
+                return dispatch({
+                    type: 'ADD_TO_CART',
+                    payload: pizza
+                })
+            case false:
+                return dispatch({
+                    type: 'DELETE_CART',
+                    payload: pizza
+                })
+        
+            default:
+                break;
+        }
+
+
+
     }
+   
 
     function onClick() {
         history.push('/CustomerForm')
@@ -52,7 +76,10 @@ function PizzaItem ({ pizza }) {
                         src={pizza.image_path}
                         
                     />
-                    <button className="removeButton">Remove</button>
+                    <button className="removeButton"
+                        onClick={() => {toggleShowAdd()}}>
+                        Remove
+                    </button>
                 </div>
 
             }
