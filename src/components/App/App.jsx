@@ -1,20 +1,23 @@
 import React from 'react';
 import axios from 'axios';
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import './App.css';
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';;
 
 // Components
 import CustomerForm from '../CustomerForm/CustomerForm';
 import Checkout from '../Checkout/Checkout';
-import SelectPizza from '../SelectPizza/SelectPizza'
+import SelectPizza from '../SelectPizza/SelectPizza';
+import PizzaItem from '../PizzaItem/PizzaItem'
 
 
 function App() {
   const dispatch = useDispatch();
-  const history = useHistory();
+
+  const pizzaCart = useSelector(store => store.checkoutReducer)
+  const [totalPrice, setTotalPrice] = useState('');
+
 
   useEffect(() => {
     getPizzas();
@@ -30,29 +33,40 @@ function App() {
         type: 'SET_PIZZA_LIST',
         payload: response.data
       })
-      // history.push('/home');
     }).catch(err => {
       console.error('GET /api/pizza failed', err);
     })
   }
+
+  // This will calculate the total price
+  function calculateTotalPrice () {
+    console.log('Pizz Cart', pizzaCart);
+
+ 
+  } // end totalPrice
+
   return (
     <div className='App'>
       <header className='App-header'>
         <div id="prime"><h1 className='App-title'>Prime Pizza</h1></div>
-        <div id="total"><p>Total: $</p></div>
+        <div id="total"><p>Total: ${totalPrice}</p></div>
       </header>
 
       <Router>
         <div>
           <div className="nav">
-            <Route path="/home" component={SelectPizza}></Route>
-            <Route path="/CustomerForm" component={CustomerForm}></Route>
-            <Route path="/Checkout" component={Checkout}></Route>
+            
+            <Route path="/home" component={SelectPizza}>
+              <SelectPizza calculateTotalPrice={calculateTotalPrice} />
+            </Route>
 
-            {/* <Route
+            <Route path="/CustomerForm" component={CustomerForm}></Route>
+
+            <Route
               path="/Checkout"
               component={() => <Checkout getPizzas={getPizzas} />}
-            /> */}
+            /> 
+
           </div>
         </div>
       </Router>

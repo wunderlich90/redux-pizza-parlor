@@ -34,20 +34,20 @@ function Checkout ({getPizzas}) {
 
         // confirm('Are you sure you want to checkout?'); 
 
-        axios({
-            method: 'POST',
-            url: '/api/pizza',
-            data: newPizza
-        }).then(response => {
-            console.log('POST /api/pizza', response);
+        // axios({
+        //     method: 'POST',
+        //     url: '/api/pizza',
+        //     data: newPizza
+        // }).then(response => {
+        //     console.log('POST /api/pizza', response);
 
-            dispatch ({
-                type: 'CLEAR_CART'
-            });
+        //     dispatch ({
+        //         type: 'CLEAR_CART'
+        //     });
 
-        }).catch(err => {
-            console.log('POST /api/pizza failed', err);
-        });
+        // }).catch(err => {
+        //     console.log('POST /api/pizza failed', err);
+        // });
       
 
     function clickHandler () {

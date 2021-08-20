@@ -6,16 +6,16 @@ TODO
     [x] page 4 to display admin table
 
 [ ] Page 1 (FARAH & JEREMY)
-    [ ]axios GET to display pizzas
-        [ ] use a dispatch to store pizza info in store
-    [ ] need add button (conditional remove button)
-        [ ] only add one of each pizza
-        [ ] should add item to cart
+    [x]axios GET to display pizzas
+        [x] use a dispatch to store pizza info in store
+    [x] need add button (conditional remove button)
+        [x] only add one of each pizza
+        [] should add item to cart
         [ ] if remove button is clicked it should subtract item from cart
     [ ] display total price in upper right corner
-    [ ] create `Next` button
-        [ ] should navigate to page 2
-        [ ] use react-router-dom
+    [x] create `Next` button
+        [x] should navigate to page 2
+        [x] use react-router-dom
 
 [x] Page 2
     [x] Need a form to store user info
