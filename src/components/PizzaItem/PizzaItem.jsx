@@ -1,9 +1,15 @@
 import { useLayoutEffect } from 'react';
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
+   
+
+
 
 function PizzaItem ({ pizza }) {
     const dispatch = useDispatch();
+    const history = useHistory();
+
 
     const [showAdd, setShowAdd] = useState(true);
 
@@ -29,6 +35,10 @@ function PizzaItem ({ pizza }) {
 
     }
    
+
+    function onClick() {
+        history.push('/CustomerForm')
+    }
 
 
     return (
@@ -73,8 +83,7 @@ function PizzaItem ({ pizza }) {
                 </div>
 
             }
-        
-        
+    
         
         </>
     );

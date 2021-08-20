@@ -103,7 +103,7 @@ function CheckoutForm () {
                 </div>
 
                 <div>
-                    <button className="nextBtnPageTwo" type="submit">NEXT</button>
+                    <button className="nextPage" type="submit">NEXT</button>
                 </div>
 
 
