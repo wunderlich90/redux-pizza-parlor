@@ -36,27 +36,19 @@ function PizzaItem ({ pizza }) {
     }
    
 
-    function onClick() {
-        history.push('/CustomerForm')
-    }
-
 
     return (
-        <> 
+        <div className="pageOne"> 
             {
                 showAdd ?
-                <div>
-                    <ul>
-                        <li>{pizza.name}</li>
-                        <li>{pizza.description}</li>
-                        <li>{pizza.price}</li>
+                <div id="addPizzaDisplay">
+                        <img src={pizza.image_path} />
 
-                    </ul>
-                    <img
-                       
-                        src={pizza.image_path}
-                        
-                    />
+                        <h3>{pizza.name}</h3>
+                        <p>{pizza.description}</p>
+                        <p>${pizza.price}</p>
+
+                   
                     <button className="addButton"
                         onClick={() => {toggleShowAdd()}}
                     >
@@ -64,18 +56,13 @@ function PizzaItem ({ pizza }) {
                     </button>
                 </div>
                 :
-                <div>
-                    <ul>
-                        <li>{pizza.name}</li>
-                        <li>{pizza.description}</li>
-                        <li>{pizza.price}</li>
+                <div id="removePizzaDisplay">
+                        <img src={pizza.image_path} />
+     
+                        <h3>{pizza.name}</h3>
+                        <p>{pizza.description}</p>
+                        <p>${pizza.price}</p>
 
-                    </ul>
-                    <img
-                       
-                        src={pizza.image_path}
-                        
-                    />
                     <button className="removeButton"
                         onClick={() => {toggleShowAdd()}}>
                         Remove
@@ -85,7 +72,7 @@ function PizzaItem ({ pizza }) {
             }
     
         
-        </>
+        </div>
     );
 }
 
