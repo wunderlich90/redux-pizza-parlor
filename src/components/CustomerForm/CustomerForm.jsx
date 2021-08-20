@@ -48,7 +48,7 @@ function CheckoutForm () {
     } // end onSubmit
 
     return (
-        <div>
+        <div className="pageTwo">
             <h1>Step 2: Customer Information</h1>
 
             <form onSubmit={onSubmit}>
@@ -103,7 +103,7 @@ function CheckoutForm () {
                 </div>
 
                 <div>
-                    <button className="nextBtnPageTwo" type="submit">NEXT</button>
+                    <button className="nextPage" type="submit">NEXT</button>
                 </div>
 
 

@@ -36,8 +36,9 @@ const checkoutReducer = (state = [], action) => {
 const customerInfoReducer = (state = [], action) => {
     switch (action.type) {
         case "CUSTOMER_FORM":
-            return [...state, action.payload]
-    
+            return [...state, action.payload];
+        case "CLEAR_CHECKOUT":
+            return [];
         default:
             return state
     }

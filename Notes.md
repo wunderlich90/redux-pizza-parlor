@@ -30,7 +30,7 @@ TODO
     [ ] needs a table
         [ ] displays pizza name
         [ ] displays pizza cost
-        [ ] pulls data fropm the store
+        [ ] pulls data from the store
     [ ] separate section to display order total
     [ ] checkout button
         [ ] should POST to the DB
