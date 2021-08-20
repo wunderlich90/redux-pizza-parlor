@@ -25,7 +25,7 @@ const checkoutReducer = (state = [], action) => {
     switch (action.type) {
         case 'ADD_TO_CART':
             return [...state, action.payload]
-        case 'DELETE_CART':
+        case 'CLEAR_CART':
             return [];
         default:
     }
