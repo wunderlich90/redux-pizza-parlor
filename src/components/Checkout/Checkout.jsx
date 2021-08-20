@@ -16,7 +16,7 @@ function Checkout () {
             type: "CLEAR_CHECKOUT"
         })
         // Takes user to home page
-        history.push('/');
+        history.push('/home');
     }
 
     return (

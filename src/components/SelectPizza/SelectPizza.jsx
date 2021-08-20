@@ -1,14 +1,15 @@
 import axios from 'axios';
 import {useSelector, useDispatch} from 'react-redux';
-import { useState } from 'react'; 
+import { useState } from 'react';
+
 
 
 function SelectPizza () {
+   
 
    const pizzas = useSelector(store => store.checkoutReducer)
 
-
-
+    
 
     return (
         <>
@@ -21,6 +22,8 @@ function SelectPizza () {
                     />
                 ))}
             </div>
+
+           
 
         </>
     );

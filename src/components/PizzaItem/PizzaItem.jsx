@@ -1,11 +1,18 @@
 import { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+
 
 function PizzaItem ({ pizza }) {
+    const history = useHistory();
 
     const [showRemove, setShowRemove] = useState(false);
 
     const toggleShowRemove = () => {
         setShowRemove(!showRemove);
+    }
+
+    function onClick() {
+        history.push('/CustomerForm')
     }
 
 
@@ -41,7 +48,9 @@ function PizzaItem ({ pizza }) {
 
             }
         
-        
+            <div>
+                <button className="nextPage" onClick={onClick}>NEXT</button>
+            </div>
         
         </>
     );
