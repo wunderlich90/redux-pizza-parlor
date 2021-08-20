@@ -25,6 +25,7 @@ function App() {
       method: 'GET',
       url: '/api/pizza'
     }).then((response) => {
+      console.log('response is', response);
       dispatch({
         type: 'SET_PIZZA_LIST',
         payload: response.data
@@ -40,7 +41,7 @@ function App() {
         <div id="prime"><h1 className='App-title'>Prime Pizza</h1></div>
         <div id="total"><p>Total: $</p></div>
       </header>
-    
+
       <Router>
         <div>
           <div className="nav">

@@ -1,3 +1,4 @@
+import { useLayoutEffect } from 'react';
 import { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 
@@ -5,10 +6,10 @@ import { useHistory } from 'react-router-dom';
 function PizzaItem ({ pizza }) {
     const history = useHistory();
 
-    const [showRemove, setShowRemove] = useState(false);
+    const [showAdd, setShowAdd] = useState(true);
 
-    const toggleShowRemove = () => {
-        setShowRemove(!showRemove);
+    const toggleShowAdd = () => {
+        setShowAdd(!showAdd);
     }
 
     function onClick() {
@@ -19,31 +20,39 @@ function PizzaItem ({ pizza }) {
     return (
         <> 
             {
-                showRemove ?
-                <div key={pizza.id}>
+                showAdd ?
+                <div>
+                    <ul>
+                        <li>{pizza.name}</li>
+                        <li>{pizza.description}</li>
+                        <li>{pizza.price}</li>
+
+                    </ul>
                     <img
-                        name={pizza.name}
-                        description={pizza.descriptiion}
-                        price={pizza.price}
+                       
                         src={pizza.image_path}
                         
                     />
-                    <button
-                        onClick={() => {toggleShowRemove()}}
+                    <button className="addButton"
+                        onClick={() => {toggleShowAdd()}}
                     >
                         Add
                     </button>
                 </div>
                 :
-                <div key={pizza.id}>
+                <div>
+                    <ul>
+                        <li>{pizza.name}</li>
+                        <li>{pizza.description}</li>
+                        <li>{pizza.price}</li>
+
+                    </ul>
                     <img
-                        name={pizza.name}
-                        description={pizza.descriptiion}
-                        price={pizza.price}
+                       
                         src={pizza.image_path}
                         
                     />
-                    <button>Remove</button>
+                    <button className="removeButton">Remove</button>
                 </div>
 
             }

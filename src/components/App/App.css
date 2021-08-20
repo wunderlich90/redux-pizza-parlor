@@ -32,6 +32,7 @@ input{
   text-align: left;
 }
 
+<<<<<<< HEAD
 table, th, td {
   border: solid 1px black;
 }
@@ -57,3 +58,39 @@ table, th, td {
 
 
 
+=======
+.pageOneNext{
+  margin: 10px;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.addButton{
+  margin: 10px;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.removeButton{
+  margin: 10px;
+  background-color: black;
+  border: none;
+  color: white;
+  padding: 15px 40px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+>>>>>>> master
