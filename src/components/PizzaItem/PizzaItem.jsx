@@ -1,13 +1,34 @@
 import { useLayoutEffect } from 'react';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 function PizzaItem ({ pizza }) {
+    const dispatch = useDispatch();
 
     const [showAdd, setShowAdd] = useState(true);
 
     const toggleShowAdd = () => {
         setShowAdd(!showAdd);
+        switch (showAdd) {
+            case true:
+                return dispatch({
+                    type: 'ADD_TO_CART',
+                    payload: pizza
+                })
+            case false:
+                return dispatch({
+                    type: 'DELETE_CART',
+                    payload: pizza
+                })
+        
+            default:
+                break;
+        }
+
+
+
     }
+   
 
 
     return (
@@ -45,7 +66,10 @@ function PizzaItem ({ pizza }) {
                         src={pizza.image_path}
                         
                     />
-                    <button className="removeButton">Remove</button>
+                    <button className="removeButton"
+                        onClick={() => {toggleShowAdd()}}>
+                        Remove
+                    </button>
                 </div>
 
             }
