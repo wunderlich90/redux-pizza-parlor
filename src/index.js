@@ -48,7 +48,7 @@ const storeInstance = createStore(
     combineReducers({
         // Add Reducers as needed
         checkoutReducer,
-        customerInfoReducer
+        customerInfoReducer,
         pizzaReducer
     }),   
     applyMiddleware(

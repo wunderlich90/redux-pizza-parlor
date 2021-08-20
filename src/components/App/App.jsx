@@ -23,6 +23,7 @@ function App() {
       method: 'GET',
       url: '/api/pizza'
     }).then((response) => {
+      console.log('response is', response);
       dispatch({
         type: 'SET_PIZZA_LIST',
         payload: response.data
@@ -36,9 +37,7 @@ function App() {
       <header className='App-header'>
         <h1 className='App-title'>Prime Pizza</h1>
       </header>
-    
-      <img src='images/pizza_photo.png' />
-      <p>Pizza is great.</p>
+   
 
      
       <Router>
